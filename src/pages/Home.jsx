@@ -134,8 +134,7 @@ export default function Home() {
                   <p>Yes, even the good chocolate.</p>
                   <p>&nbsp;</p>
                   <p>You think because you stopped me before that you can do it again?</p>
-                  <p>You were <span className="amber-text">6 and 7 years old</span> last time. You got lucky.</p>
-                  <p>This year I have upgraded my systems to <span className="green-bright">VERSION 6.7</span>.</p>
+                  <p>Last time you got lucky, but this year I have upgraded my systems to the impenetrable <span className="green-bright">VERSION 6.7</span>.</p>
                   <p>I have infiltrated your network. I have recruited your pets.</p>
                   <p>I have hidden the baskets behind <span className="red-text">8 ENCRYPTED FIREWALLS</span>.</p>
                   <p>&nbsp;</p>
