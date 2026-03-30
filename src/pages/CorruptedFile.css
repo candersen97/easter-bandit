@@ -1,0 +1,192 @@
+.corrupted-page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding-bottom: 3rem;
+}
+
+.cf-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  flex-wrap: wrap;
+}
+
+.cf-logo {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--green);
+}
+
+.cf-node {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.cf-status {
+  margin-left: auto;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid;
+  letter-spacing: 0.1em;
+}
+
+.status-red { color: var(--red); border-color: var(--red); }
+.status-green { color: var(--green); border-color: var(--green); }
+
+.cf-body {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.cf-warning {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--amber);
+  background: rgba(255, 183, 0, 0.05);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.cf-file-box {
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  margin-bottom: 1.5rem;
+}
+
+.cf-file-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cf-corrupt-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid;
+  letter-spacing: 0.08em;
+}
+
+.badge-red { color: var(--red); border-color: var(--red); }
+.badge-green { color: var(--green); border-color: var(--green); }
+
+.cf-file-content {
+  padding: 1.25rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-all;
+  min-height: 280px;
+  transition: color 0.3s;
+}
+
+.cf-file-content.corrupted {
+  color: var(--red-dim);
+  opacity: 0.8;
+}
+
+.cf-file-content.decrypted {
+  color: var(--green);
+  text-shadow: 0 0 4px rgba(0,255,65,0.3);
+}
+
+.cf-decrypt-box {
+  border: 1px solid var(--border-bright);
+  background: var(--bg2);
+  padding: 1rem;
+}
+
+.cf-decrypt-hint {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+.cf-decrypt-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.prompt {
+  color: var(--green);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.cf-input {
+  background: var(--bg);
+  border: 1px solid var(--border-bright);
+  color: var(--green);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  outline: none;
+  flex: 1;
+  min-width: 200px;
+  text-transform: uppercase;
+  caret-color: var(--green);
+}
+
+.cf-btn {
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+
+.cf-btn:hover {
+  background: var(--green);
+  color: var(--bg);
+}
+
+.cf-code-msg {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.cf-success {
+  border: 1px solid var(--green);
+  background: rgba(0, 255, 65, 0.05);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.cf-contact-link {
+  color: var(--amber);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: inline-block;
+  border-bottom: 1px solid var(--amber);
+  padding-bottom: 1px;
+}
+
+.cf-contact-link:hover { color: var(--green); border-color: var(--green); }
+
+.red-text { color: var(--red); }
+.amber-text { color: var(--amber); }
+.green-bright { color: var(--green); text-shadow: 0 0 8px var(--green); }
+.text-dim { color: var(--text-dim); }

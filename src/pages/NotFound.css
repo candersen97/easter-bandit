@@ -1,0 +1,56 @@
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nf-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nf-code {
+  font-family: 'VT323', monospace;
+  font-size: 8rem;
+  color: var(--green);
+  line-height: 1;
+  text-shadow: 0 0 20px var(--green);
+  animation: glitch 3s infinite;
+}
+
+.nf-msg {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+}
+
+.nf-sub {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  max-width: 400px;
+  line-height: 1.7;
+}
+
+.nf-link {
+  margin-top: 1rem;
+  color: var(--amber);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: 1px solid var(--amber);
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.08em;
+  transition: all 0.2s;
+}
+
+.nf-link:hover {
+  background: var(--amber);
+  color: var(--bg);
+}
+
+.red-text { color: var(--red); }
+.text-dim { color: var(--text-dim); }
