@@ -205,6 +205,39 @@
   border-left: 2px solid var(--green-faint);
 }
 
+/* AUTH BOX */
+.auth-box {
+  border: 1px solid var(--red);
+  background: var(--bg2);
+  animation: pulse-border 4s ease infinite;
+}
+
+.auth-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auth-form .input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-form .prompt {
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
 /* UTILITIES */
 .red-text { color: var(--red); }
 .amber-text { color: var(--amber); }

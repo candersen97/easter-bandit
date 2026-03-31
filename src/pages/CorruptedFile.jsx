@@ -63,11 +63,12 @@ export default function CorruptedFile() {
   const handleDecrypt = (e) => {
     e.preventDefault()
     const c = code.trim().toUpperCase()
-    // Accepts STELLA or HOBBES as the key from step 1
-    if (c === 'STELLA' || c === 'HOBBES' || c === 'CHOCOLATE' || c === 'MIDNIGHT') {
+    if (c === 'EMERALD') {
       setDecrypting(true)
+    } else if (c === 'STELLA' || c === 'HOBBES' || c === 'COLLAR') {
+      setCodeMsg('✗ That was last year\'s key. The Bandit upgraded. The pond card told you how to find the new one — go back to the homepage comms log.')
     } else {
-      setCodeMsg('✗ DECRYPTION KEY INVALID. You need the name from NODE-01.')
+      setCodeMsg('✗ DECRYPTION KEY INVALID. The clue from the pond tells you how to derive it. Look at the COMMS LOG on the homepage — carefully.')
     }
   }
 
@@ -103,7 +104,7 @@ export default function CorruptedFile() {
           <div className="cf-decrypt-box">
             <p className="cf-decrypt-hint">
               &gt; Enter decryption key to restore file integrity.
-              <br />&gt; Key was embedded in NODE-01. Did you check the source?
+              <br />&gt; The pond clue told you how to derive it. Go back to the homepage if you need to.
             </p>
             <form onSubmit={handleDecrypt} className="cf-decrypt-form">
               <span className="prompt">&gt; KEY: </span>

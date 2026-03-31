@@ -3,16 +3,17 @@ import './Contact.css'
 
 // Auto-reply messages — randomly selected so each submission feels unique
 const BANDIT_REPLIES = [
-  `TRANSMISSION RECEIVED. I'm impressed you made it this far — truly.
-Not impressed enough to give up, obviously. But still.
+  `TRANSMISSION RECEIVED. Authentication confirmed.
 
-You've cracked 6 nodes. Two remain.
-The vault is closer than you think.
-It's above you. Literally.
+You've cracked most of my firewalls. I'll give you that.
+The vault is closer than you think. It's ABOVE you. Literally.
 
-The final cipher awaits in the PACKOUT.
-Crack the combination. You know how.
-The platform gave you what you need.
+But first — the PLATFORM in the woods.
+The logic grid up there will give you 4 digits.
+Those 4 digits open the Packout.
+
+Inside the Packout is the FINAL cipher.
+Decode it and you're done. Assuming you can.
 
 Do NOT think this means I respect you.
 I respect no one. I am the Easter Bandit.
@@ -25,8 +26,8 @@ Traitors. Both of them. I gave them SO many treats.
 
 Here is a hint, because I am feeling generous today:
 The last two steps both involve going UP.
-Up to the box. Up to the vault.
-Everything is above you.
+Up to the platform. Up to the vault.
+Everything ends above you.
 
 The baskets are waiting. I am waiting.
 Waiting for you to FAIL. Which you won't.
@@ -37,14 +38,12 @@ Which is annoying.
   `MESSAGE INTERCEPTED AND LOGGED.
 
 You want the baskets? Here is what I will tell you:
-The combination lock on the Packout is 4 digits.
-You found those 4 digits on the platform in the woods.
-Think carefully. You wrote them down. Right?
+The platform in the woods holds a logic grid.
+Solve it carefully. Every clue matters.
+You'll need that 3-digit number from Stella's collar — remember it?
 
-You did write them down... right?
-
-Once you open the Packout, the final cipher is inside.
-Decode it. Go UP. The baskets are yours.
+Once you have the combination and open the Packout,
+the final cipher is inside. Decode it. Go UP.
 This does not mean I have lost. I have merely...
 been temporarily delayed.
 
@@ -55,12 +54,26 @@ With VERSION 7.0.
 ]
 
 export default function Contact() {
+  const [authenticated, setAuthenticated] = useState(false)
+  const [authCode, setAuthCode] = useState('')
+  const [authError, setAuthError] = useState('')
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [reply, setReply] = useState('')
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+
+  const handleAuth = (e) => {
+    e.preventDefault()
+    const code = authCode.trim()
+    if (code === '631') {
+      setAuthenticated(true)
+      setAuthError('')
+    } else {
+      setAuthError('✗ AUTHENTICATION FAILED. That is not the 3-digit code. Go back to Firewall 02 if you lost it.')
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -84,8 +97,8 @@ export default function Contact() {
 She accepted payment in the form of one (1) ear scratch and unlimited treats.
 Your loyalty system is broken.
 
-But since you asked about the informants — here is a hint:
-Check what Stella wears. She carries something important.
+You already found the collar. You already have the code.
+Now keep moving. The platform awaits.
 
 — EB`
     } else if (msg.includes('please') || msg.includes('give back') || msg.includes('return')) {
@@ -94,14 +107,17 @@ I respect the attempt. I do not respect the result.
 The baskets remain mine until you earn them back.
 
 You're getting close. Keep going.
-Check the PACKOUT when you have the combination.
+The platform logic grid gives you what opens the Packout.
 
 — EB`
     } else if (msg.includes('combination') || msg.includes('code') || msg.includes('lock')) {
       selectedReply = `Clever. You're thinking ahead.
-The combination is 4 digits. You found them on the elevated platform.
+The combination is 4 digits. The logic grid on the platform will produce them.
 The platform in the woods. 8 feet up. With a ladder.
 You remember the ladder. Right?
+
+And you'll want that 3-digit code from the collar puzzle.
+It connects to the grid. Everything connects.
 
 Go back if you need to. I'm not going anywhere.
 Neither are the baskets.
@@ -125,10 +141,38 @@ Neither are the baskets.
       <div className="contact-body">
         <div className="contact-warning">
           <p><span className="amber-text">⚠ NOTICE:</span> All transmissions are logged and monitored by the Easter Bandit.</p>
-          <p>By submitting this form, you confirm that you are not a 6-year-old. You are older now. Do better.</p>
+          <p>This channel is encrypted. Authentication is required before transmission.</p>
         </div>
 
-        {!submitted ? (
+        {!authenticated ? (
+          <div className="auth-box">
+            <div className="box-header">
+              <span className="box-title">// AUTHENTICATION REQUIRED</span>
+              <span className="box-badge red">LOCKED</span>
+            </div>
+            <div className="auth-content">
+              <p>This comms channel is encrypted with a 3-digit security code.</p>
+              <p className="text-dim">You solved it at Firewall 02 — Stella's collar. You did write it down... right?</p>
+              <form onSubmit={handleAuth} className="auth-form">
+                <div className="input-row">
+                  <span className="prompt">&gt; </span>
+                  <input
+                    type="text"
+                    value={authCode}
+                    onChange={e => setAuthCode(e.target.value)}
+                    placeholder="ENTER 3-DIGIT CODE..."
+                    className="form-input"
+                    maxLength={3}
+                    autoComplete="off"
+                    spellCheck="false"
+                  />
+                </div>
+                <button type="submit" className="form-submit">AUTHENTICATE</button>
+              </form>
+              {authError && <p className="form-error">{authError}</p>}
+            </div>
+          </div>
+        ) : !submitted ? (
           <div className="contact-form-box">
             <div className="box-header">
               <span className="box-title">// TRANSMIT MESSAGE TO: THE EASTER BANDIT</span>

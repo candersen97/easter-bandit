@@ -64,12 +64,16 @@ export default function Home() {
   const handleAccessCode = (e) => {
     e.preventDefault()
     const code = accessCode.trim().toUpperCase()
-    if (code === 'STELLA' || code === 'HOBBES') {
-      setAccessMsg('⚠ INFORMANT IDENTIFIED. Check their collar for further instructions. — EB')
+    if (code === 'COLLAR' || code === 'COLLARS') {
+      setAccessMsg('⚠ INFORMANT COLLAR LOCATED. Find the chocolate lab — STELLA. Check what she wears around her neck. — EB')
+    } else if (code === 'STELLA' || code === 'HOBBES') {
+      setAccessMsg('> You know the names. But that is not the CODE. The source told you what to CHECK. What object? — EB')
+    } else if (code === 'CHECK STELLAS COLLAR') {
+      setAccessMsg('> Close — but the terminal only accepts ONE WORD. The last word of the decoded message. — EB')
     } else if (code === 'WHITE RABBIT' || code === 'WHITERABBIT') {
-      setAccessMsg('> OPERATION NAME CONFIRMED. You know more than you should. — EB')
+      setAccessMsg('> OPERATION NAME CONFIRMED. But that is not the access code. Keep decoding. — EB')
     } else {
-      setAccessMsg('✗ INCORRECT. Did you even look at the source code? Disappointing.')
+      setAccessMsg('✗ INCORRECT. Have you looked at this page\'s source code? Right-click → View Page Source. Find the hidden transmission.')
     }
   }
 
@@ -188,7 +192,7 @@ export default function Home() {
                   <span className="box-title">// ACCESS TERMINAL</span>
                   <span className="box-badge green">AWAITING INPUT</span>
                 </div>
-                <p className="terminal-hint">Think you've cracked NODE-01? Enter the access code below.</p>
+                <p className="terminal-hint">Decode the hidden transmission. Enter the ACCESS CODE below.</p>
                 <form onSubmit={handleAccessCode} className="access-form">
                   <div className="input-row">
                     <span className="prompt">&gt; </span>
@@ -219,31 +223,31 @@ export default function Home() {
                 <div className="comms-log">
                   <div className="comm-entry">
                     <span className="comm-time">[06:32:14]</span>
-                    <span className="comm-text">Stella — "treat delivery confirmed. they suspect nothing."</span>
+                    <span className="comm-text">Stella — "Evidence secured. Treats delivered. They suspect nothing."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[06:47:03]</span>
-                    <span className="comm-text">Hobbes — "baskets loaded. pond container secured."</span>
+                    <span className="comm-text">Hobbes — "Making rounds at the pond. Container locked down."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:01:55]</span>
-                    <span className="comm-text">Charlie — "packout box. combination set. 4 digits."</span>
+                    <span className="comm-text">Charlie — "Everything is set. Packout combination confirmed."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:14:22]</span>
-                    <span className="comm-text">Juneau — "platform in woods confirmed. clue is up high."</span>
+                    <span className="comm-text">Juneau — "Recon complete. Platform in woods ready for deployment."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:28:41]</span>
-                    <span className="comm-text">Max — "BGE secured. feeling warm about this plan."</span>
+                    <span className="comm-text">Max — "All quiet at the BGE. Feeling warm about this plan."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:45:00]</span>
-                    <span className="comm-text red-text">EB — "OPERATION WHITE RABBIT is a go. 6.7 activated."</span>
+                    <span className="comm-text red-text">EB — "Launch sequence initiated. White Rabbit is live."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[08:00:00]</span>
-                    <span className="comm-text amber-text">Finnie — "coming home from college just in time to watch them fail."</span>
+                    <span className="comm-text amber-text">Finnie — "Definitely watching from college. Bet against them as usual."</span>
                   </div>
                 </div>
               </div>
