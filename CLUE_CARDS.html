@@ -5,36 +5,36 @@
 <title>Operation White Rabbit — Printable Clue Cards</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=VT323&display=swap');
-  
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  
+
   body {
-    background: #111;
+    background: #fff;
     font-family: 'Share Tech Mono', monospace;
-    padding: 2rem;
-    color: #00ff41;
+    padding: 1.5rem;
+    color: #111;
   }
 
   h1 {
     font-family: 'Orbitron', monospace;
     text-align: center;
     margin-bottom: 0.5rem;
-    color: #ff2222;
+    color: #111;
     font-size: 1.4rem;
     letter-spacing: 0.15em;
   }
 
   .subtitle {
     text-align: center;
-    color: #007a1f;
+    color: #666;
     font-size: 0.8rem;
     margin-bottom: 2rem;
     letter-spacing: 0.1em;
   }
 
   .card {
-    border: 2px solid #00ff41;
-    background: #020a02;
+    border: 2px solid #111;
+    background: #fff;
     margin-bottom: 2rem;
     page-break-inside: avoid;
     max-width: 750px;
@@ -43,8 +43,8 @@
   }
 
   .card-header {
-    background: #040f04;
-    border-bottom: 1px solid #00ff4144;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ccc;
     padding: 0.6rem 1rem;
     display: flex;
     justify-content: space-between;
@@ -54,16 +54,8 @@
   .card-node {
     font-family: 'Orbitron', monospace;
     font-size: 0.75rem;
-    color: #007a1f;
+    color: #333;
     letter-spacing: 0.15em;
-  }
-
-  .card-location {
-    font-size: 0.7rem;
-    color: #ffb700;
-    border: 1px solid #ffb700;
-    padding: 0.1rem 0.4rem;
-    letter-spacing: 0.08em;
   }
 
   .card-body {
@@ -75,8 +67,8 @@
   .card-body p { margin-bottom: 0.5rem; }
 
   .puzzle-box {
-    border: 1px dashed #00ff4166;
-    background: #040f04;
+    border: 1px dashed #999;
+    background: #f9f9f9;
     padding: 1rem;
     margin: 1rem 0;
     font-size: 0.85rem;
@@ -84,35 +76,22 @@
   }
 
   .answer-line {
-    border-bottom: 1px solid #00ff4144;
+    border-bottom: 1px solid #999;
     display: inline-block;
     min-width: 200px;
     margin-left: 0.5rem;
   }
 
-  .red { color: #ff2222; }
-  .amber { color: #ffb700; }
-  .dim { color: #007a1f; }
-  .bright { color: #00ff41; text-shadow: 0 0 6px #00ff41; }
+  .red { color: #cc0000; }
+  .amber { color: #886600; font-weight: bold; }
+  .bright { color: #111; font-weight: bold; }
 
   .separator {
     text-align: center;
-    color: #007a1f;
+    color: #999;
     letter-spacing: 0.5em;
     margin: 1.5rem 0;
     font-size: 0.7rem;
-  }
-
-  .print-note {
-    text-align: center;
-    color: #ffb700;
-    font-size: 0.75rem;
-    margin-bottom: 2rem;
-    border: 1px solid #ffb70044;
-    padding: 0.5rem;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   pre {
@@ -123,69 +102,22 @@
   }
 
   @media print {
-    body { background: white; color: black; padding: 1rem; }
-    .card { border-color: black; background: white; color: black; }
-    .card-header { background: #eee; border-color: #ccc; }
-    .card-node { color: #333; }
-    .card-location { color: #333; border-color: #333; }
-    .puzzle-box { border-color: #666; background: #f9f9f9; }
-    .red { color: #cc0000; }
-    .amber { color: #886600; }
-    .dim { color: #666; }
-    .bright { color: black; text-shadow: none; font-weight: bold; }
-    .print-note { display: none; }
+    body { padding: 0.5rem; }
+    .card { border-width: 1.5px; }
   }
 </style>
 </head>
 <body>
 
-<h1>⚠ OPERATION WHITE RABBIT ⚠</h1>
-<p class="subtitle">EB//DARKNET :: PRINTABLE CLUE CARDS :: CONFIDENTIAL — DO NOT LET KIDS SEE</p>
-
-<div class="print-note">
-  ✂ PRINT THIS PAGE AND CUT OUT EACH CARD · PLACE EACH CARD AT ITS DESIGNATED LOCATION BEFORE THE HUNT BEGINS
-</div>
-
-<!-- =================== STEP 1 - STARTING QR =================== -->
-<div class="card">
-  <div class="card-header">
-    <span class="card-node">FIREWALL 01 // ENTRY NODE</span>
-    <span class="card-location">📍 THEATER ROOM TV</span>
-  </div>
-  <div class="card-body">
-    <p><span class="red">[ PLACE THIS NOTE ON OR NEAR THE THEATER ROOM TV ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
-    <p><span class="bright">ATTENTION.</span></p>
-    <p>Your Easter baskets have been seized.</p>
-    <p>This is not a drill. This is OPERATION WHITE RABBIT.</p>
-    <p>&nbsp;</p>
-    <p>To begin recovering what is yours, scan the QR code below.</p>
-    <p>Or type the address manually if you must.</p>
-    <p>&nbsp;</p>
-    <p class="amber">[ TAPE YOUR QR CODE HERE — pointing to your Vercel URL ]</p>
-    <p class="dim">URL: your-project-name.vercel.app</p>
-    <p>&nbsp;</p>
-    <p>The first clue is on the website.</p>
-    <p>But you'll have to look <span class="amber">carefully</span>.</p>
-    <p>Not everything is visible on the surface.</p>
-    <p>&nbsp;</p>
-    <p class="dim">— The Easter Bandit, v6.7</p>
-  </div>
-</div>
-
-<div class="separator">· · · · · · · · · · · · · · · · · · · ·</div>
+<h1>OPERATION WHITE RABBIT</h1>
+<p class="subtitle">EB//DARKNET :: PRINTABLE CLUE CARDS</p>
 
 <!-- =================== STEP 2 - DOG COLLAR =================== -->
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 02 // INFORMANT TAG</span>
-    <span class="card-location">📍 STELLA'S COLLAR</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ ATTACH THIS TAG TO STELLA'S COLLAR ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p>So you decoded NODE-01. Fine.</p>
     <p>Stella, I'm disappointed in you. You were supposed to stay quiet.</p>
     <p>&nbsp;</p>
@@ -218,36 +150,32 @@
       <p><span class="amber">DIGIT 3:</span></p>
       <p>Find the next number in this sequence:</p>
       <p>&nbsp;&nbsp;<span class="bright">2, &nbsp;3, &nbsp;5, &nbsp;8, &nbsp;13, &nbsp;___</span></p>
-      <p class="dim">(Hint: look at the differences between consecutive numbers.)</p>
+      <p>(Hint: look at the differences between consecutive numbers.)</p>
       <br>
       <p>Take ONLY the ones digit of your answer.</p>
       <p>DIGIT 3 = <span class="answer-line"></span></p>
       <br>
       <p><span class="amber">YOUR 3-DIGIT CODE: [ __ ] [ __ ] [ __ ]</span></p>
-      <p class="red">⚠ WRITE THIS DOWN. You will need it TWICE more before this is over.</p>
+      <p class="red">WRITE THIS DOWN. You will need it TWICE more before this is over.</p>
     </div>
     <p>&nbsp;</p>
     <p>I see you're all going to a <span class="amber">concert</span> this summer.</p>
     <p>Maybe you should all listen to one of his albums.</p>
     <p>&nbsp;</p>
-    <p class="dim">— EB (Stella sends her apologies. She does not mean them.)</p>
+    <p>— EB (Stella sends her apologies. She does not mean them.)</p>
   </div>
 </div>
 
 <div class="separator">· · · · · · · · · · · · · · · · · · · ·</div>
 
-<!-- =================== STEP 3 - COFFEE TABLE =================== -->
+<!-- =================== STEP 3 - RECORD CASE =================== -->
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 03 // CLASSIFIED DOCUMENT</span>
-    <span class="card-location">📍 INSIDE RECORD CASE — STICK SEASON BY NOAH KAHAN</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE INSIDE RECORD CASE — STICK SEASON BY NOAH KAHAN ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright">EB//DARKNET — CLASSIFIED MISSION BRIEFING</span></p>
-    <p class="dim">DOCUMENT: ALPHA-RABBIT-03 | EYES ONLY</p>
+    <p>DOCUMENT: ALPHA-RABBIT-03 | EYES ONLY</p>
     <br>
     <p>Impressive. You found the classified document.</p>
 
@@ -280,8 +208,6 @@
       <p>Spaces between groups are word breaks.</p>
       <p>Answer: <span class="answer-line" style="min-width:400px;"></span></p>
     </div>
-    <p class="dim">DECODED: "LOOK IN HOBBES OUTDOOR BATH" → Find Hobbes' outdoor water bowl/bath.</p>
-    <p class="dim">(Remove this line before placing — the answer is for you, not them!)</p>
   </div>
 </div>
 
@@ -291,12 +217,8 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 04 // CORRUPTED FILE</span>
-    <span class="card-location">📍 ORNAMENTAL POND (waterproof container)</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ SEAL IN WATERPROOF CONTAINER (zip-lock bag or pill bottle) AT POND EDGE ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p>You found my pond cache. Excellent.</p>
     <p>This QR code leads to a corrupted file on my network.</p>
     <p>You will need a DECRYPTION KEY to unlock it.</p>
@@ -308,12 +230,12 @@
     <p>Read the <span class="bright">FIRST LETTER</span> of each MESSAGE (after the dash — not the pet name).</p>
     <p>Read top to bottom. The 7 letters spell your decryption key.</p>
     <p>&nbsp;</p>
-    <p class="amber">[ TAPE A QR CODE HERE pointing to: your-site.vercel.app/node-04 ]</p>
+    <p class="amber">[ TAPE A QR CODE HERE pointing to: easter-bandit.vercel.app/node-04 ]</p>
     <p>&nbsp;</p>
     <p>Or type the address:</p>
-    <p class="bright">your-site.vercel.app/node-04</p>
+    <p><span class="bright">easter-bandit.vercel.app/node-04</span></p>
     <p>&nbsp;</p>
-    <p class="dim">— EB (the pond was a great hiding spot. admit it.)</p>
+    <p>— EB (the pond was a great hiding spot. admit it.)</p>
   </div>
 </div>
 
@@ -323,12 +245,8 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 05 // HOT ZONE</span>
-    <span class="card-location">📍 BIG GREEN EGG (inside dome or ash drawer)</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE INSIDE THE BIG GREEN EGG ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright">Getting warmer.</span></p>
     <p>Or as Max the cat put it: <span class="amber">"feeling warm about this plan."</span></p>
     <p>&nbsp;</p>
@@ -336,8 +254,7 @@
     <p>You stand no chance of harvesting this secret.</p>
     <p>Not even Calypso can help you.</p>
     <p>&nbsp;</p>
-    <p class="dim">→ Clue is inside a 3D printed puzzle box, buried in the garden. A small 3D printed hawk marks the spot.</p>
-    <p class="dim">— EB</p>
+    <p>— EB</p>
   </div>
 </div>
 
@@ -347,12 +264,8 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 06 // BURIED CACHE</span>
-    <span class="card-location">📍 GARDEN — 3D printed puzzle box buried, marked by hawk</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE CLUE INSIDE PUZZLE BOX — BURY IN GARDEN — PLACE HAWK ON TOP ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p>You found the hawk. You dug up the box. You solved the puzzle box.</p>
     <p>I am mildly impressed.</p>
     <p>&nbsp;</p>
@@ -363,8 +276,7 @@
     <p>The guinea pigs were NOT recruited. They are innocent.</p>
     <p>The cats, however...</p>
     <p>&nbsp;</p>
-    <p class="dim">→ Go find the pine chip / guinea pig bedding bag inside the house.</p>
-    <p class="dim">— EB</p>
+    <p>— EB</p>
   </div>
 </div>
 
@@ -374,20 +286,16 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 07 // BURIED INTEL</span>
-    <span class="card-location">📍 GUINEA PIG PINE CHIP BAG (sealed in zip-lock inside bag)</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ SEAL IN ZIP-LOCK BAG AND BURY IN THE PINE CHIP BAG ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright">AGENT REPORT — CAT DIVISION</span></p>
     <p>FROM: Charlie &amp; Juneau</p>
     <p>TO: The Easter Bandit</p>
     <p>&nbsp;</p>
-    <p><span class="dim">"We have confirmed the elevated platform is secure.</span></p>
-    <p><span class="dim">The zipline is gone but the ladder remains.</span></p>
-    <p><span class="dim">We would go ourselves but we are cats and prefer not to climb things</span></p>
-    <p><span class="dim">that are not of our choosing. — Charlie &amp; Juneau"</span></p>
+    <p>"We have confirmed the elevated platform is secure.</p>
+    <p>The zipline is gone but the ladder remains.</p>
+    <p>We would go ourselves but we are cats and prefer not to climb things</p>
+    <p>that are not of our choosing. — Charlie &amp; Juneau"</p>
     <p>&nbsp;</p>
     <p>You heard them. The elevated platform in the woods awaits.</p>
     <p>8 feet up. Ladder present. Clue is waiting at the top.</p>
@@ -399,8 +307,7 @@
     <p>The Bandit will reply with a COMMS CODE for each agent.</p>
     <p>Write down all three codes. You will need them at the platform.</p>
     <p>&nbsp;</p>
-    <p class="dim">→ After collecting all 3 comms codes, go to the wooden platform in the woods.</p>
-    <p class="dim">— EB</p>
+    <p>— EB</p>
   </div>
 </div>
 
@@ -410,12 +317,8 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 08 // ELEVATED NODE</span>
-    <span class="card-location">📍 ZIPLINE PLATFORM IN WOODS (weatherproof box on platform)</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE IN WEATHERPROOF BOX ON THE PLATFORM — include the logic puzzle below ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright">You climbed. I respect the climb.</span></p>
     <p>Finnie sends his regards. He knew you'd make it this far.</p>
     <p>He bet against you. He owes me a dollar.</p>
@@ -450,7 +353,6 @@
       <p>POND=<span class="answer-line" style="min-width:30px;"></span>  EGG=<span class="answer-line" style="min-width:30px;"></span>  PLATFORM=<span class="answer-line" style="min-width:30px;"></span>  PACKOUT=<span class="answer-line" style="min-width:30px;"></span></p>
       <p>&nbsp;</p>
       <p><span class="bright">GRID CODE = POND · EGG · PLATFORM · PACKOUT</span></p>
-      <p class="dim">Answer: 3 · 1 · 2 · 4 → Grid Code is <strong>3124</strong></p>
     </div>
     <p>&nbsp;</p>
     <div class="puzzle-box">
@@ -467,13 +369,12 @@
       <p>Add each COLUMN to get the final 4-digit combination.</p>
       <p>&nbsp;</p>
       <p class="amber">PACKOUT COMBINATION = <span class="answer-line" style="min-width:30px;"></span> <span class="answer-line" style="min-width:30px;"></span> <span class="answer-line" style="min-width:30px;"></span> <span class="answer-line" style="min-width:30px;"></span></p>
-      <p class="dim">Answer: 1102 + 2011 + 1020 + 3124 = <strong>7257</strong></p>
     </div>
     <p>&nbsp;</p>
     <p>Take this number to the garage. Find the <span class="amber">Milwaukee Packout box</span>.</p>
     <p>There is a combination lock on it. You know what to do.</p>
     <p>&nbsp;</p>
-    <p class="dim">— EB</p>
+    <p>— EB</p>
   </div>
 </div>
 
@@ -483,12 +384,8 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FIREWALL 09 // VAULT KEY</span>
-    <span class="card-location">📍 MILWAUKEE PACKOUT BOX (inside, with red bandana)</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE INSIDE THE LOCKED PACKOUT WITH A RED BANDANA ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright">You opened the Packout. I didn't think you would.</span></p>
     <p>I mean, I knew you would. I planned this. But still.</p>
     <p>&nbsp;</p>
@@ -522,16 +419,15 @@
       <p style="letter-spacing:0.1em;">2-19-8 &nbsp; 5-3 &nbsp; 6-11-8</p>
       <p style="letter-spacing:0.1em;">2-6-6-5-7</p>
       <p>&nbsp;</p>
-      <p class="dim">Decoded: "MIND YOUR HEAD / YOUR BASKETS / ARE IN THE / ATTIC"</p>
-      <p class="dim">→ Attic above the master bedroom closet. Ladder required.</p>
+      <p>Answer: <span class="answer-line" style="min-width:400px;"></span></p>
     </div>
     <p>&nbsp;</p>
     <p>Go. Climb. Retrieve what is yours.</p>
     <p>You have defeated me. This time.</p>
     <p>I will return. <span class="red">Version 7.0 is already in development.</span></p>
     <p>&nbsp;</p>
-    <p class="dim">— The Easter Bandit</p>
-    <p class="dim">  Voice scrambled. Bandana secured. Pride: slightly wounded.</p>
+    <p>— The Easter Bandit</p>
+    <p>Voice scrambled. Bandana secured. Pride: slightly wounded.</p>
   </div>
 </div>
 
@@ -541,18 +437,14 @@
 <div class="card">
   <div class="card-header">
     <span class="card-node">FINAL // VICTORY MESSAGE</span>
-    <span class="card-location">📍 ON TOP OF EASTER BASKETS IN ATTIC</span>
   </div>
   <div class="card-body">
-    <p><span class="red">[ PLACE ON TOP OF THE BASKETS IN THE ATTIC ]</span></p>
-    <p class="dim">— — — — — — — — CUT HERE — — — — — — — —</p>
-    <br>
     <p><span class="bright" style="font-size:1.1rem;">OPERATION WHITE RABBIT — COMPLETE.</span></p>
     <p>&nbsp;</p>
     <p>You found them.</p>
     <p>All 9 firewalls. Cracked. By you. Together.</p>
     <p>&nbsp;</p>
-    <p>Stella, Hobbes, Charlie, Juneau, Max and Finnie's Finnie — all of them</p>
+    <p>Stella, Hobbes, Charlie, Juneau, Max and Finnie — all of them</p>
     <p>were no match for you in the end. Traitors, every one.</p>
     <p>&nbsp;</p>
     <p>The baskets are yours. The chocolate is yours.</p>
@@ -562,9 +454,9 @@
     <p>I will be back next year.</p>
     <p>Version 7.0. You have been warned.</p>
     <p>&nbsp;</p>
-    <p class="dim">— The Easter Bandit</p>
-    <p class="dim">  Retired (temporarily). Voice unscrambled (slightly).</p>
-    <p class="dim">  Currently somewhere you can't find me. Probably the couch.</p>
+    <p>— The Easter Bandit</p>
+    <p>Retired (temporarily). Voice unscrambled (slightly).</p>
+    <p>Currently somewhere you can't find me. Probably the couch.</p>
   </div>
 </div>
 
