@@ -1,0 +1,245 @@
+.guide {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 1.5rem;
+}
+
+.guide-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.guide-header {
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.guide-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+
+.guide-subtitle {
+  font-size: 0.75rem;
+  color: var(--red);
+  letter-spacing: 0.2em;
+}
+
+/* Sections */
+.guide-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.85rem;
+  color: var(--amber);
+  letter-spacing: 0.15em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+/* Step cards */
+.step-card {
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  margin-bottom: 1rem;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.step-number {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.7rem;
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.step-node {
+  margin-left: auto;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.step-body {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.step-row {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.step-label {
+  flex-shrink: 0;
+  width: 80px;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  padding-top: 0.15rem;
+}
+
+.step-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-details li {
+  padding: 0.1rem 0;
+  color: var(--text);
+}
+
+.step-details li::before {
+  content: '› ';
+  color: var(--green-dim);
+}
+
+.step-cipher {
+  font-size: 0.78rem;
+  color: var(--green);
+  background: var(--bg);
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--green-faint);
+  word-break: break-all;
+}
+
+.step-answer {
+  color: var(--amber);
+  font-weight: bold;
+}
+
+/* Cross-references */
+.ref-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ref-card {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  font-size: 0.82rem;
+}
+
+.ref-key {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.75rem;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 0.1rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.ref-note {
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Pages */
+.pages-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-card {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  font-size: 0.82rem;
+}
+
+.page-url {
+  font-size: 0.8rem;
+  color: var(--green);
+  background: var(--bg);
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--green-faint);
+  flex-shrink: 0;
+}
+
+.page-purpose {
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Hints */
+.hints-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hint-card {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  font-size: 0.82rem;
+}
+
+.hint-step {
+  font-size: 0.65rem;
+  color: var(--green);
+  border: 1px solid var(--green-faint);
+  padding: 0.1rem 0.4rem;
+  flex-shrink: 0;
+  letter-spacing: 0.08em;
+}
+
+.hint-text {
+  color: var(--text);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Footer */
+.guide-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.1em;
+}
