@@ -1,0 +1,313 @@
+.broadcast {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── BOOT SEQUENCE ── */
+.bc-boot {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 1s ease, visibility 1s ease;
+  padding: 3rem;
+}
+
+.bc-boot.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.bc-boot-content {
+  max-width: 900px;
+  width: 100%;
+}
+
+.bc-boot-line {
+  font-size: 1.4rem;
+  color: var(--green);
+  line-height: 2;
+  animation: fadeInUp 0.2s ease both;
+}
+
+/* ── STATIC / TAKEOVER FLASH ── */
+.bc-static {
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255,255,255,0.03) 1px,
+      rgba(255,255,255,0.03) 2px
+    );
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  animation: static-flash 0.15s ease;
+}
+
+@keyframes static-flash {
+  0% { opacity: 1; background-color: rgba(255,255,255,0.15); }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+/* ── MAIN CONTENT ── */
+.bc-main {
+  animation: fadeInUp 1s ease both;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ── ALERT BANNER ── */
+.bc-alert-bar {
+  width: 100%;
+  border: 2px solid var(--red);
+  background: var(--red-dim);
+  padding: 0.6rem 0;
+  overflow: hidden;
+}
+
+.bc-alert-ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+/* ── SIGNAL HIJACKED HEADER ── */
+.bc-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bc-hijack-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  color: var(--red);
+  letter-spacing: 0.3em;
+  border: 1px solid var(--red);
+  padding: 0.3rem 1.5rem;
+  animation: pulse-border-red 2s ease infinite;
+}
+
+@keyframes pulse-border-red {
+  0%, 100% { border-color: var(--red); box-shadow: 0 0 10px rgba(255,34,34,0.2); }
+  50% { border-color: #ff6666; box-shadow: 0 0 30px rgba(255,34,34,0.5); }
+}
+
+.bc-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--green);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 30px rgba(0,255,65,0.4), 0 0 60px rgba(0,255,65,0.15);
+  line-height: 1.2;
+}
+
+.bc-title-slash {
+  color: var(--red);
+}
+
+.bc-version {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+}
+
+/* ── ASCII ART ── */
+.bc-ascii {
+  color: var(--red);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255,34,34,0.3);
+}
+
+/* ── RANSOM MESSAGE ── */
+.bc-message-box {
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  width: 100%;
+  max-width: 1000px;
+  animation: pulse-border 4s ease infinite;
+}
+
+.bc-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+
+.bc-message-label {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.bc-message-badge {
+  font-size: 0.75rem;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.1em;
+  animation: blink 1.5s infinite;
+}
+
+.bc-message-body {
+  padding: 2rem 2.5rem;
+  font-size: 1.3rem;
+  line-height: 2.2;
+}
+
+.bc-message-body p {
+  margin: 0;
+}
+
+.bc-message-body .red-text { color: var(--red); }
+.bc-message-body .amber-text { color: var(--amber); }
+.bc-message-body .green-bright { color: var(--green); text-shadow: 0 0 8px var(--green); }
+.bc-message-body .text-dim { color: var(--text-dim); }
+
+/* ── INSTRUCTION BOX ── */
+.bc-instruction {
+  border: 2px solid var(--amber);
+  background: var(--bg2);
+  padding: 2rem 2.5rem;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bc-instruction-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  color: var(--amber);
+  letter-spacing: 0.2em;
+}
+
+.bc-instruction-text {
+  font-size: 1.3rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.bc-url-box {
+  border: 1px solid var(--green);
+  background: var(--bg);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bc-url-label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+}
+
+.bc-url {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  color: var(--green);
+  text-shadow: 0 0 15px rgba(0,255,65,0.4);
+  letter-spacing: 0.05em;
+}
+
+.bc-qr-placeholder {
+  border: 2px dashed var(--border-bright);
+  padding: 2rem 3rem;
+  color: var(--text-dim);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.bc-hint {
+  font-size: 1.1rem;
+  color: var(--amber);
+  font-style: italic;
+}
+
+/* ── STATUS GRID ── */
+.bc-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.bc-status-item {
+  border: 1px solid var(--green-faint);
+  background: var(--bg2);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.bc-status-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.bc-status-value {
+  font-family: 'VT323', monospace;
+  font-size: 1.4rem;
+}
+
+/* ── FOOTER ── */
+.bc-footer {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ── RESPONSIVE (smaller screens) ── */
+@media (max-width: 900px) {
+  .bc-title { font-size: 2.2rem; }
+  .bc-message-body { font-size: 1rem; padding: 1.5rem; }
+  .bc-ascii { font-size: 0.55rem; }
+  .bc-url { font-size: 1.2rem; }
+  .bc-status-grid { grid-template-columns: 1fr 1fr; }
+  .broadcast { padding: 1.5rem; }
+}
