@@ -91,26 +91,6 @@ export default function Broadcast() {
   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚═════╝ ╚═╝   ╚═╝  `}
           </pre>
 
-          {/* Ransom message */}
-          <div className={`bc-message-box ${glitchActive ? 'glitch' : ''}`}>
-            <div className="bc-message-header">
-              <span className="bc-message-label">// TRANSMISSION FROM: THE EASTER BANDIT</span>
-              <span className="bc-message-badge">LIVE BROADCAST</span>
-            </div>
-            <div className="bc-message-body">
-              <p><span className="red-text">ATTENTION.</span></p>
-              <p>&nbsp;</p>
-              <p>Your Easter baskets have been seized. All of them.</p>
-              <p>Yes, even the good chocolate.</p>
-              <p>&nbsp;</p>
-              <p>I have upgraded my systems to the impenetrable <span className="green-bright">VERSION 6.7</span>.</p>
-              <p>I have infiltrated your network. I have recruited your pets.</p>
-              <p>I have hidden the baskets behind <span className="red-text">8 ENCRYPTED FIREWALLS</span>.</p>
-              <p>&nbsp;</p>
-              <p>You think you can stop me? <span className="amber-text">Prove it.</span></p>
-            </div>
-          </div>
-
           {/* Instruction */}
           <div className="bc-instruction">
             <div className="bc-instruction-title">YOUR FIRST MOVE</div>
