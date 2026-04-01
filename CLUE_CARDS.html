@@ -37,9 +37,14 @@
     background: #fff;
     margin-bottom: 2rem;
     page-break-inside: avoid;
+    page-break-before: always;
     max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .card:first-of-type {
+    page-break-before: avoid;
   }
 
   .card-header {
@@ -101,9 +106,19 @@
     line-height: 1.8;
   }
 
+  .compact .card-body {
+    padding: 0.75rem 1.25rem;
+    line-height: 1.6;
+  }
+  .compact .card-body p { margin-bottom: 0.25rem; }
+  .compact .puzzle-box { padding: 0.6rem; margin: 0.5rem 0; line-height: 1.6; }
+  .compact pre { line-height: 1.4; }
+
   @media print {
     body { padding: 0.5rem; }
     .card { border-width: 1.5px; }
+    .separator { display: none; }
+    .subtitle { display: none; }
   }
 </style>
 </head>
@@ -169,24 +184,19 @@
 <div class="separator">· · · · · · · · · · · · · · · · · · · ·</div>
 
 <!-- =================== STEP 3 - RECORD CASE =================== -->
-<div class="card">
+<div class="card compact">
   <div class="card-header">
     <span class="card-node">FIREWALL 03 // CLASSIFIED DOCUMENT</span>
   </div>
   <div class="card-body">
     <p><span class="bright">EB//DARKNET — CLASSIFIED MISSION BRIEFING</span></p>
     <p>DOCUMENT: ALPHA-RABBIT-03 | EYES ONLY</p>
-    <br>
-    <p>Impressive. You found the classified document.</p>
-
     <p>&nbsp;</p>
+    <p>Impressive. You found the classified document.</p>
     <p>Solve this GRID CIPHER to find your next location:</p>
-    <br>
     <div class="puzzle-box">
       <p><span class="bright">━━━ POLYBIUS SQUARE CIPHER ━━━</span></p>
-      <br>
       <p>Each letter is encoded as its ROW,COLUMN position in this 5×5 grid:</p>
-      <br>
       <pre>
        1    2    3    4    5
   1 [  A    B    C    D    E  ]
@@ -314,7 +324,7 @@
 <div class="separator">· · · · · · · · · · · · · · · · · · · ·</div>
 
 <!-- =================== STEP 8 - ZIPLINE PLATFORM =================== -->
-<div class="card">
+<div class="card compact">
   <div class="card-header">
     <span class="card-node">FIREWALL 08 // ELEVATED NODE</span>
   </div>
@@ -381,7 +391,7 @@
 <div class="separator">· · · · · · · · · · · · · · · · · · · ·</div>
 
 <!-- =================== STEP 9 - PACKOUT =================== -->
-<div class="card">
+<div class="card compact">
   <div class="card-header">
     <span class="card-node">FIREWALL 09 // VAULT KEY</span>
   </div>
@@ -394,10 +404,8 @@
     <p>It is yours now. I have 47 more.</p>
     <p>&nbsp;</p>
     <p>Now decode this final cipher. It is the location of the vault.</p>
-    <br>
     <div class="puzzle-box">
       <p><span class="bright">━━━ FINAL CIPHER — KEYWORD SUBSTITUTION ━━━</span></p>
-      <br>
       <p>The Bandit used the keyword <span class="amber">BANDIT</span> to build a cipher alphabet.</p>
       <p>Step 1: Write the keyword (removing duplicate letters).</p>
       <p>Step 2: Continue with the rest of the alphabet in order,</p>
