@@ -26,10 +26,7 @@ The Bandit does not fear getting wet.
 He is very professional.)
 
 NEXT COORDINATES:
-The iron egg holds your next clue.
-It lives on the deck. It gets very hot.
-You will not need fire today.
-Just look inside.
+Wow, that must have been an enormous chicken!
 
 — EB
 [TRANSMISSION ENDS]`
