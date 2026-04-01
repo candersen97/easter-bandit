@@ -3,9 +3,13 @@ import './Contact.css'
 
 // Name-specific replies with embedded codes
 const NAME_REPLIES = {
-  simon: `AGENT SIMON. Identified. The eldest.
-The Bandit expected you to lead this operation.
-You always were the strategist.
+  simon: `AGENT SIMON. Identified. The youngest.
+Do not be fooled — the Bandit does not
+underestimate you. That would be a mistake.
+
+I considered recruiting Pumpkin to my network.
+But guinea pigs are impossible to negotiate with.
+They only care about lettuce. I respect that.
 
 Your COMMS CODE is: 1102
 
@@ -13,14 +17,16 @@ Write it down. Guard it. You will need it later.
 Each agent receives a different code.
 ALL THREE are required to open the final lock.
 
-Do not share this with the others until
-you are ready. Trust no one. Except maybe each other.
-
 — EB v6.7`,
 
-  lucy: `AGENT LUCY. Identified. The resourceful one.
-The Bandit has been watching. You're clever.
-Too clever. It makes me uncomfortable.
+  lucy: `AGENT LUCY. Identified. The middle child.
+The Bandit has been watching. You're resourceful.
+Too resourceful. It makes me uncomfortable.
+
+I attempted to infiltrate your room for recon
+but I could not get past the 400 stuffed animals.
+Seriously. How many does one person need?
+They outnumber my entire spy network.
 
 Your COMMS CODE is: 2011
 
@@ -28,22 +34,22 @@ Write it down. Guard it. You will need it later.
 Each agent receives a different code.
 ALL THREE are required to open the final lock.
 
-I should have built more firewalls.
-
 — EB v6.7`,
 
-  chloe: `AGENT CHLOE. Identified. The youngest.
-Do not be fooled — the Bandit does not
-underestimate you. That would be a mistake.
+  chloe: `AGENT CHLOE. Identified. The eldest.
+The Bandit expected you to lead this operation.
+
+I must say — Finnie is the finest agent in my
+network and I have YOU to thank for raising her.
+A well-parented cat is a dangerous cat.
+She sends her regards from college. Or from
+wherever she is napping right now.
 
 Your COMMS CODE is: 1020
 
 Write it down. Guard it. You will need it later.
 Each agent receives a different code.
 ALL THREE are required to open the final lock.
-
-The Bandit respects persistence.
-Not that I would ever admit that out loud.
 
 — EB v6.7`,
 }
