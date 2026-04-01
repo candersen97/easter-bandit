@@ -99,7 +99,7 @@ const STEPS = [
     node: 'FIREWALL 09 // VAULT KEY',
     location: 'Physical card + red bandana inside locked Packout',
     what: 'Decode a keyword substitution cipher (keyword: BANDIT).',
-    decoded: 'THE BASKETS ARE IN THE ATTIC ABOVE THE MASTER CLOSET MIND YOUR HEAD',
+    decoded: 'MIND YOUR HEAD YOUR BASKETS ARE IN THE ATTIC',
     result: 'Go to the attic above the master bedroom closet.',
   },
   {
