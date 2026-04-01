@@ -40,10 +40,10 @@ ALL THREE are required to open the final lock.
 The Bandit expected you to lead this operation.
 
 I must say — Finnie is the finest agent in my
-network and I have YOU to thank for raising her.
+network and I have YOU to thank for raising him.
 A well-parented cat is a dangerous cat.
-She sends her regards from college. Or from
-wherever she is napping right now.
+He is home for Easter, which means he is probably
+napping somewhere nearby. Plotting. As usual.
 
 Your COMMS CODE is: 1020
 

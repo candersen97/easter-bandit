@@ -248,7 +248,7 @@ export default function Home() {
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[08:00:00]</span>
-                    <span className="comm-text amber-text">Finnie — "Definitely watching from college. Bet against them as usual."</span>
+                    <span className="comm-text amber-text">Finnie — "Definitely watching from the couch. Bet against them as usual."</span>
                   </div>
                 </div>
               </div>
