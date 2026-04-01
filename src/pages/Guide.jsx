@@ -28,7 +28,7 @@ const STEPS = [
   },
   {
     step: 3,
-    title: 'Coffee Table',
+    title: 'Stick Season Record Case',
     node: 'FIREWALL 03 // CLASSIFIED DOCUMENT',
     location: 'Physical card inside Stick Season (Noah Kahan) record case',
     what: 'Decode a Polybius Square cipher (5x5 grid, row+column).',
