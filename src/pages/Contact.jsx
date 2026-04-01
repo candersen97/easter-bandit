@@ -1,57 +1,62 @@
 import { useState } from 'react'
 import './Contact.css'
 
-// Auto-reply messages — randomly selected so each submission feels unique
-const BANDIT_REPLIES = [
-  `TRANSMISSION RECEIVED. Authentication confirmed.
+// Name-specific replies with embedded codes
+const NAME_REPLIES = {
+  simon: `AGENT SIMON. Identified. The eldest.
+The Bandit expected you to lead this operation.
+You always were the strategist.
 
-You've cracked most of my firewalls. I'll give you that.
-The vault is closer than you think. It's ABOVE you. Literally.
+Your COMMS CODE is: 1102
 
-But first — the PLATFORM in the woods.
-The logic grid up there will give you 4 digits.
-Those 4 digits open the Packout.
+Write it down. Guard it. You will need it later.
+Each agent receives a different code.
+ALL THREE are required to open the final lock.
 
-Inside the Packout is the FINAL cipher.
-Decode it and you're done. Assuming you can.
-
-Do NOT think this means I respect you.
-I respect no one. I am the Easter Bandit.
+Do not share this with the others until
+you are ready. Trust no one. Except maybe each other.
 
 — EB v6.7`,
 
-  `Oh good, you found the comms terminal.
-Stella and Hobbes told me you would eventually.
-Traitors. Both of them. I gave them SO many treats.
+  lucy: `AGENT LUCY. Identified. The resourceful one.
+The Bandit has been watching. You're clever.
+Too clever. It makes me uncomfortable.
 
-Here is a hint, because I am feeling generous today:
-The last two steps both involve going UP.
-Up to the platform. Up to the vault.
-Everything ends above you.
+Your COMMS CODE is: 2011
 
-The baskets are waiting. I am waiting.
-Waiting for you to FAIL. Which you won't.
-Which is annoying.
+Write it down. Guard it. You will need it later.
+Each agent receives a different code.
+ALL THREE are required to open the final lock.
 
-— EB`,
+I should have built more firewalls.
 
-  `MESSAGE INTERCEPTED AND LOGGED.
+— EB v6.7`,
 
-You want the baskets? Here is what I will tell you:
-The platform in the woods holds a logic grid.
-Solve it carefully. Every clue matters.
-You'll need that 3-digit number from Stella's collar — remember it?
+  chloe: `AGENT CHLOE. Identified. The youngest.
+Do not be fooled — the Bandit does not
+underestimate you. That would be a mistake.
 
-Once you have the combination and open the Packout,
-the final cipher is inside. Decode it. Go UP.
-This does not mean I have lost. I have merely...
-been temporarily delayed.
+Your COMMS CODE is: 1020
 
-See you next year. I'll be back.
-With VERSION 7.0.
+Write it down. Guard it. You will need it later.
+Each agent receives a different code.
+ALL THREE are required to open the final lock.
 
-— EB`,
-]
+The Bandit respects persistence.
+Not that I would ever admit that out loud.
+
+— EB v6.7`,
+}
+
+const UNAUTHORIZED_REPLY = `USER NOT RECOGNIZED.
+
+The Bandit's comms system requires a KNOWN AGENT.
+Only three agents are authorized on this channel.
+
+Type your REAL NAME. First name only.
+The Bandit knows who you are.
+
+— EB v6.7`
 
 export default function Contact() {
   const [authenticated, setAuthenticated] = useState(false)
@@ -87,42 +92,16 @@ export default function Contact() {
     // Simulate transmission delay for dramatic effect
     await new Promise(r => setTimeout(r, 2200))
 
-    // Pick a reply based on message content for some variation
-    let selectedReply = BANDIT_REPLIES[Math.floor(Math.random() * BANDIT_REPLIES.length)]
+    // Match name to known agents
+    const agentName = name.trim().toLowerCase()
+    let selectedReply = UNAUTHORIZED_REPLY
 
-    // Context-aware replies
-    const msg = message.toLowerCase()
-    if (msg.includes('stella') || msg.includes('hobbes') || msg.includes('dog')) {
-      selectedReply = `The dogs work for ME now. Stella especially. Very professional.
-She accepted payment in the form of one (1) ear scratch and unlimited treats.
-Your loyalty system is broken.
-
-You already found the collar. You already have the code.
-Now keep moving. The platform awaits.
-
-— EB`
-    } else if (msg.includes('please') || msg.includes('give back') || msg.includes('return')) {
-      selectedReply = `Pleading. Interesting strategy.
-I respect the attempt. I do not respect the result.
-The baskets remain mine until you earn them back.
-
-You're getting close. Keep going.
-The platform logic grid gives you what opens the Packout.
-
-— EB`
-    } else if (msg.includes('combination') || msg.includes('code') || msg.includes('lock')) {
-      selectedReply = `Clever. You're thinking ahead.
-The combination is 4 digits. The logic grid on the platform will produce them.
-The platform in the woods. 8 feet up. With a ladder.
-You remember the ladder. Right?
-
-And you'll want that 3-digit code from the collar puzzle.
-It connects to the grid. Everything connects.
-
-Go back if you need to. I'm not going anywhere.
-Neither are the baskets.
-
-— EB`
+    if (agentName.includes('simon') || agentName.includes('simom') || agentName.includes('simin')) {
+      selectedReply = NAME_REPLIES.simon
+    } else if (agentName.includes('lucy') || agentName.includes('luci') || agentName.includes('luce')) {
+      selectedReply = NAME_REPLIES.lucy
+    } else if (agentName.includes('chloe') || agentName.includes('chloé') || agentName.includes('chole') || agentName.includes('cloe')) {
+      selectedReply = NAME_REPLIES.chloe
     }
 
     setReply(selectedReply)
