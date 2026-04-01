@@ -95,7 +95,21 @@ export default function Broadcast() {
           <div className="bc-instruction">
             <div className="bc-instruction-title">YOUR FIRST MOVE</div>
             <div className="bc-qr">
-              <img src="/qr-code.png" alt="QR Code" className="bc-qr-img" />
+              {/* Sliced image layers for scramble effect */}
+              <div className="bc-qr-scramble">
+                {[...Array(8)].map((_, i) => (
+                  <div
+                    key={i}
+                    className={`bc-qr-slice bc-qr-slice-${i}`}
+                    style={{
+                      backgroundImage: 'url(/qr-code.png)',
+                      backgroundSize: '200px 200px',
+                      backgroundPosition: `0 ${-i * 25}px`,
+                      top: `${i * 25}px`,
+                    }}
+                  />
+                ))}
+              </div>
             </div>
             <p className="bc-hint">Scan destination carefully for classified intel.</p>
           </div>
