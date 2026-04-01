@@ -7,10 +7,10 @@ const STEPS = [
     node: 'FIREWALL 01 // ENTRY NODE',
     location: 'Theater room TV displays /tv, kids open easter-bandit.vercel.app on phones',
     what: 'Find the pulsing red "LEAKED FILE :: CLASSIFIED" node on homepage, tap it. Decode hex cipher using reference table.',
-    cipher: '43 48 45 43 4B 20 53 54 45 4C 4C 41 53 20 43 4F 4C 4C 41 52',
-    decoded: 'CHECK STELLAS COLLAR',
-    answer: 'COLLAR (last word of decoded message)',
-    result: 'Terminal tells them to find Stella the chocolate lab and check her collar.',
+    cipher: '42 41 53 4B 45 54 20 54 48 49 45 46 20 53 54 52 49 4B 45 53',
+    decoded: 'BASKET THIEF STRIKES',
+    answer: 'STRIKES (last word of decoded message)',
+    result: 'Terminal tells them to check the brown informant\'s clothing (Stella\'s collar).',
   },
   {
     step: 2,
@@ -114,7 +114,7 @@ const STEPS = [
 const CROSS_REFS = [
   { key: '631', note: 'Used at /contact auth gate, recalled at Step 7, middle digit (3) used in Step 8 logic grid' },
   { key: 'EMERALD', note: 'Depends on comms log message order on homepage — changing messages breaks this' },
-  { key: 'COLLAR', note: 'Homepage access terminal answer' },
+  { key: 'STRIKES', note: 'Homepage access terminal answer' },
   { key: '7257', note: 'Final Packout combo (1102 + 2011 + 1020 + 3124 added digit-by-digit). Set physical lock to this.' },
 ]
 

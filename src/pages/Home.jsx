@@ -65,12 +65,12 @@ export default function Home() {
   const handleAccessCode = (e) => {
     e.preventDefault()
     const code = accessCode.trim().toUpperCase()
-    if (code === 'COLLAR' || code === 'COLLARS') {
-      setAccessMsg('⚠ INFORMANT COLLAR LOCATED. Find the chocolate lab — STELLA. Check what she wears around her neck. — EB')
-    } else if (code === 'STELLA' || code === 'HOBBES') {
-      setAccessMsg('> You know the names. But that is not the CODE. The source told you what to CHECK. What object? — EB')
-    } else if (code === 'CHECK STELLAS COLLAR') {
+    if (code === 'STRIKES' || code === 'STRIKE') {
+      setAccessMsg('⚠ STRIKE CONFIRMED. Check the brown informant\'s clothing. — EB')
+    } else if (code === 'BASKET THIEF STRIKES') {
       setAccessMsg('> Close — but the terminal only accepts ONE WORD. The last word of the decoded message. — EB')
+    } else if (code === 'BASKET' || code === 'THIEF') {
+      setAccessMsg('> That is part of the message, but not the CODE. The terminal requires the LAST WORD. — EB')
     } else if (code === 'WHITE RABBIT' || code === 'WHITERABBIT') {
       setAccessMsg('> OPERATION NAME CONFIRMED. But that is not the access code. Keep decoding. — EB')
     } else {
@@ -318,7 +318,7 @@ Y=59  Z=5A  (space=20)`
                     </div>
                     <p>&nbsp;</p>
                     <p className="amber-text">ENCODED TRANSMISSION:</p>
-                    <p className="leak-cipher green-bright">43 48 45 43 4B 20 53 54 45 4C 4C 41 53 20 43 4F 4C 4C 41 52</p>
+                    <p className="leak-cipher green-bright">42 41 53 4B 45 54 20 54 48 49 45 46 20 53 54 52 49 4B 45 53</p>
                     <p>&nbsp;</p>
                     <p>Decode it. That is your first instruction.</p>
                     <p>Then return to the <span className="amber-text">ACCESS TERMINAL</span> above.</p>
