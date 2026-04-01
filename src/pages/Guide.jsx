@@ -32,14 +32,14 @@ const STEPS = [
     node: 'FIREWALL 03 // CLASSIFIED DOCUMENT',
     location: 'Physical card inside Stick Season (Noah Kahan) record case',
     what: 'Decode a Polybius Square cipher (5x5 grid, row+column).',
-    decoded: 'GO TO THE POND IN THE BACK YARD',
-    result: 'Go to the ornamental pond.',
+    decoded: 'LOOK IN HOBBES OUTDOOR BATH',
+    result: "Find Hobbes' outdoor water bowl/bath.",
   },
   {
     step: 4,
-    title: 'Ornamental Pond',
+    title: "Hobbes' Outdoor Bath (Pond)",
     node: 'FIREWALL 04 // CORRUPTED FILE',
-    location: 'Physical card in waterproof container at pond + /node-04 on phones',
+    location: "Physical card in waterproof container at pond (Hobbes' bath) + /node-04 on phones",
     what: 'Read the FIRST LETTER of each message in the Intercepted Comms Log on the homepage.',
     details: [
       'Evidence secured... → E',
