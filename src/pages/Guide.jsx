@@ -84,14 +84,14 @@ const STEPS = [
     location: 'Physical card in weatherproof box on the platform',
     what: 'Solve a logic grid for a 4-digit combo.',
     details: [
-      'POND + EGG = 3',
+      'POND + EGG = 4',
       'PACKOUT is the largest number',
       'EGG < PLATFORM',
       'POND is odd',
-      'PLATFORM = middle digit of 631 = 3',
+      'POND is GREATER than PLATFORM',
     ],
-    answer: 'Grid code: 1234. Then add all codes digit-by-digit: Simon 1102 + Lucy 2011 + Chloe 1020 + Grid 1234 = 5367',
-    result: 'Combination is 5367. Go to the Milwaukee Packout box in the garage and unlock it.',
+    answer: 'POND=3, EGG=1, PLATFORM=2, PACKOUT=4 → Grid code: 3124. Then add: 1102 + 2011 + 1020 + 3124 = 7257',
+    result: 'Combination is 7257. Go to the Milwaukee Packout box in the garage and unlock it.',
   },
   {
     step: 9,
@@ -115,7 +115,7 @@ const CROSS_REFS = [
   { key: '631', note: 'Used at /contact auth gate, recalled at Step 7, middle digit (3) used in Step 8 logic grid' },
   { key: 'EMERALD', note: 'Depends on comms log message order on homepage — changing messages breaks this' },
   { key: 'COLLAR', note: 'Homepage access terminal answer' },
-  { key: '5367', note: 'Final Packout combo (1102 + 2011 + 1020 + 1234 added digit-by-digit). Set physical lock to this.' },
+  { key: '7257', note: 'Final Packout combo (1102 + 2011 + 1020 + 3124 added digit-by-digit). Set physical lock to this.' },
 ]
 
 const PAGES = [
