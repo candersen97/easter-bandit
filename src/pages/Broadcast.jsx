@@ -94,20 +94,10 @@ export default function Broadcast() {
           {/* Instruction */}
           <div className="bc-instruction">
             <div className="bc-instruction-title">YOUR FIRST MOVE</div>
-            <p className="bc-instruction-text">
-              Open a browser on your phone or laptop.<br />
-              Navigate to the following address.<br />
-              The first clue is on the website — but you will have to look <span className="amber-text">carefully</span>.<br />
-              Not everything is visible on the surface.
-            </p>
-            <div className="bc-url-box">
-              <span className="bc-url-label">TARGET URL</span>
-              <span className="bc-url">easter-bandit.vercel.app</span>
-            </div>
             <div className="bc-qr">
               <img src="/qr-code.png" alt="QR Code" className="bc-qr-img" />
             </div>
-            <p className="bc-hint">The source told you to look deeper. Right-click might help.</p>
+            <p className="bc-hint">Scan destination carefully for classified intel.</p>
           </div>
 
           {/* Status grid */}
