@@ -20,7 +20,7 @@ const STEPS = [
     what: 'Solve 3 mini-puzzles for a 3-digit code.',
     details: [
       'Digit 1: Dogs (Stella=5 + Hobbes=2) minus lowest cat (Max=1) = 6',
-      'Digit 2: TRUE/FALSE (1+1+1) = 3',
+      'Digit 2: TRUE/FALSE — mom was cheerleader (T), cruise honeymoon (T), cat jumped out car window (T) → 1+1+1 = 3',
       'Digit 3: Sequence 2,3,5,8,13,21 → ones digit = 1',
     ],
     answer: '631 — needed again at Steps 7 and 8',
