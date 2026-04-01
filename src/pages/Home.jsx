@@ -30,6 +30,7 @@ export default function Home() {
   const [glitchActive, setGlitchActive] = useState(false)
   const [accessCode, setAccessCode] = useState('')
   const [accessMsg, setAccessMsg] = useState('')
+  const [leakOpen, setLeakOpen] = useState(false)
   const bootRef = useRef(null)
 
   useEffect(() => {
@@ -73,7 +74,7 @@ export default function Home() {
     } else if (code === 'WHITE RABBIT' || code === 'WHITERABBIT') {
       setAccessMsg('> OPERATION NAME CONFIRMED. But that is not the access code. Keep decoding. — EB')
     } else {
-      setAccessMsg('✗ INCORRECT. Have you looked at this page\'s source code? Right-click → View Page Source. Find the hidden transmission.')
+      setAccessMsg('✗ INCORRECT. Look around this page. Something is leaking data that shouldn\'t be. Find the hidden transmission.')
     }
   }
 
@@ -263,6 +264,11 @@ export default function Home() {
                     <span>NODE-01 :: HOMEPAGE</span>
                     <span className="node-status green-bright">ACTIVE</span>
                   </div>
+                  <div className="node leaked" onClick={() => setLeakOpen(!leakOpen)}>
+                    <span className="node-dot red blink"></span>
+                    <span className="leak-label">LEAKED FILE :: CLASSIFIED</span>
+                    <span className="node-status red-text">{leakOpen ? 'OPEN' : 'TAP TO VIEW'}</span>
+                  </div>
                   <div className="node">
                     <span className="node-dot amber"></span>
                     <span>NODE-04 :: CORRUPTED FILE</span>
@@ -285,6 +291,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Leaked file panel */}
+              {leakOpen && (
+                <div className="leak-panel">
+                  <div className="box-header">
+                    <span className="box-title">// SECURITY AUDIT LOG :: CLASSIFIED</span>
+                    <span className="box-badge red">DATA LEAK</span>
+                  </div>
+                  <div className="leak-body">
+                    <p className="text-dim">So you found the leaked file. Good. Most people never look.</p>
+                    <p className="text-dim">But looking is not the same as understanding.</p>
+                    <p>&nbsp;</p>
+                    <p>Below is an intercepted transmission from Agent Stella.</p>
+                    <p>It is encoded in <span className="amber-text">HEXADECIMAL</span> (base 16).</p>
+                    <p>Each PAIR of hex digits represents one ASCII character.</p>
+                    <p>&nbsp;</p>
+                    <div className="leak-table">
+                      <p className="green-bright">REFERENCE TABLE:</p>
+                      <pre className="leak-hex-table">{
+`A=41  B=42  C=43  D=44  E=45  F=46  G=47  H=48
+I=49  J=4A  K=4B  L=4C  M=4D  N=4E  O=4F  P=50
+Q=51  R=52  S=53  T=54  U=55  V=56  W=57  X=58
+Y=59  Z=5A  (space=20)`
+                      }</pre>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p className="amber-text">ENCODED TRANSMISSION:</p>
+                    <p className="leak-cipher green-bright">43 48 45 43 4B 20 53 54 45 4C 4C 41 53 20 43 4F 4C 4C 41 52</p>
+                    <p>&nbsp;</p>
+                    <p>Decode it. That is your first instruction.</p>
+                    <p>Then return to the <span className="amber-text">ACCESS TERMINAL</span> above.</p>
+                    <p>The terminal requires a code — the <span className="red-text">LAST WORD</span> of the decoded message.</p>
+                    <p>&nbsp;</p>
+                    <p className="text-dim">— EB (I really didn't think you'd look here.)</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
