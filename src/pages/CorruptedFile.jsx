@@ -16,17 +16,14 @@ const REAL_MESSAGE = `FILE: BANDIT_MISSION_LOG_NODE04.txt
 CLASSIFICATION: EYES ONLY
 DATE: EASTER MORNING
 
-AGENT REPORT — POND OPERATION:
+AGENT REPORT — NEXT COORDINATES:
 
-The waterproof container has been secured
-at the edge of the ornamental pond.
-Look near the water. Get your hands wet.
-The Bandit does not fear getting wet.
-(The Bandit also waterproofed everything.
-He is very professional.)
+Not every egg holds a yolk.
+Some hold secrets.
 
-NEXT COORDINATES:
-Wow, that must have been an enormous chicken!
+The Bandit always said: if you can't
+stand the heat, stay out of my
+hiding spots.
 
 — EB
 [TRANSMISSION ENDS]`
@@ -101,7 +98,7 @@ export default function CorruptedFile() {
           <div className="cf-decrypt-box">
             <p className="cf-decrypt-hint">
               &gt; Enter decryption key to restore file integrity.
-              <br />&gt; The pond clue told you how to derive it. Go back to the homepage if you need to.
+              <br />&gt; Go back to the homepage if you need to.
             </p>
             <form onSubmit={handleDecrypt} className="cf-decrypt-form">
               <span className="prompt">&gt; KEY: </span>
