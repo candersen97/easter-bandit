@@ -19,9 +19,9 @@ const STEPS = [
     location: "Physical card attached to Stella's collar",
     what: 'Solve 3 mini-puzzles for a 3-digit code.',
     details: [
-      'Digit 1: Dogs (Stella=5 + Hobbes=2) minus lowest cat (Max=1) = 6',
-      'Digit 2: TRUE/FALSE — mom was cheerleader (T), cruise honeymoon (T), cat jumped out car window (T) → 1+1+1 = 3',
-      'Digit 3: Sequence 2,3,5,8,13,21 → ones digit = 1',
+      'Digit 1: (Stella + Max)² ÷ (Juneau × Hobbes) = (5+1)² ÷ (3×2) = 36 ÷ 6 = 6',
+      'Digit 2: √(Stella² − Charlie²) = √(25−16) = √9 = 3',
+      'Digit 3: |Hobbes² − Stella| = |4−5| = |−1| = 1',
     ],
     answer: '631 — needed again at Steps 7 and 8',
     result: 'Hints at a concert this summer → find the Stick Season album by Noah Kahan, clue is inside the record case.',
@@ -127,7 +127,7 @@ const PAGES = [
 
 const HINTS = [
   { step: 1, hint: '"Look around the page. Something is glowing red that shouldn\'t be."' },
-  { step: 2, hint: '"Add the two dogs\' ranks together first, then subtract."' },
+  { step: 2, hint: '"Remember PEMDAS — parentheses and exponents first. Squaring means multiply by itself."' },
   { step: 3, hint: '"First number is the row, second is the column."' },
   { step: 4, hint: '"Read the first letter AFTER the dash — not the pet name."' },
   { step: 8, hint: '"Start with what you know for sure — PACKOUT is 4, PLATFORM is 3."' },

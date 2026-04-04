@@ -228,19 +228,19 @@ export default function Home() {
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[06:47:03]</span>
-                    <span className="comm-text">Hobbes — "Making rounds at the pond. Container locked down."</span>
+                    <span className="comm-text">Hobbes — "Making rounds at the agreed upon location. Container locked down."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:01:55]</span>
-                    <span className="comm-text">Charlie — "Everything is set. Packout combination confirmed."</span>
+                    <span className="comm-text">Charlie — "Everything is set. PO combination confirmed."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:14:22]</span>
-                    <span className="comm-text">Juneau — "Recon complete. Platform in woods ready for deployment."</span>
+                    <span className="comm-text">Juneau — "Recon complete. Platform ready for deployment."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:28:41]</span>
-                    <span className="comm-text">Max — "All quiet at the BGE. Feeling warm about this plan."</span>
+                    <span className="comm-text">Max — "All quiet at the BGE. They can't stand the heat."</span>
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[07:45:00]</span>
@@ -248,7 +248,7 @@ export default function Home() {
                   </div>
                   <div className="comm-entry">
                     <span className="comm-time">[08:00:00]</span>
-                    <span className="comm-text amber-text">Finnie — "Definitely watching from the couch. Bet against them as usual."</span>
+                    <span className="comm-text amber-text">Finnie — "Definitely watching from couch. I don't trust these other \"agents\"."</span>
                   </div>
                 </div>
               </div>
