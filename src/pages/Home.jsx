@@ -15,6 +15,24 @@ const BOOT_LINES = [
   '> YOU HAVE BEEN EXPECTED.',
 ]
 
+const BANDIT_ASCII = `  ██████╗  █████╗ ███╗  ██╗██████╗ ██╗████████╗
+  ██╔══██╗██╔══██╗████╗ ██║██╔══██╗██║╚══██╔══╝
+  ██████╔╝███████║██╔██╗██║██║  ██║██║   ██║
+  ██╔══██╗██╔══██║██║╚████║██║  ██║██║   ██║
+  ██████╔╝██║  ██║██║ ╚███║██████╔╝██║   ██║
+  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚═════╝ ╚═╝   ╚═╝  `
+
+const SCRAMBLE_CHARS = '█▓▒░╔╗╚╝║═╠╣╦╩╬▄▀■□▪▫◘◙◦'
+
+function scrambleText(real, level) {
+  return real.split('').map(c => {
+    if (c === ' ' || c === '\n') return c
+    return Math.random() < level
+      ? SCRAMBLE_CHARS[Math.floor(Math.random() * SCRAMBLE_CHARS.length)]
+      : c
+  }).join('')
+}
+
 const THREAT_LEVEL_MESSAGES = [
   'MINIMAL — You found the website. Impressive for a 6-year-old.',
   'LOW — Still cute. Keep trying.',
@@ -31,6 +49,8 @@ export default function Home() {
   const [accessCode, setAccessCode] = useState('')
   const [accessMsg, setAccessMsg] = useState('')
   const [leakOpen, setLeakOpen] = useState(false)
+  const [asciiText, setAsciiText] = useState(scrambleText(BANDIT_ASCII, 1.0))
+  const [asciiRevealed, setAsciiRevealed] = useState(false)
   const bootRef = useRef(null)
 
   useEffect(() => {
@@ -46,6 +66,22 @@ export default function Home() {
     }, 220)
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    if (!showMain || asciiRevealed) return
+    let level = 1.0
+    const interval = setInterval(() => {
+      level -= 0.015
+      if (level <= 0) {
+        setAsciiText(BANDIT_ASCII)
+        setAsciiRevealed(true)
+        clearInterval(interval)
+      } else {
+        setAsciiText(scrambleText(BANDIT_ASCII, level))
+      }
+    }, 70)
+    return () => clearInterval(interval)
+  }, [showMain, asciiRevealed])
 
   useEffect(() => {
     const glitchInterval = setInterval(() => {
@@ -125,12 +161,7 @@ export default function Home() {
                   <span className="box-badge red">INCOMING</span>
                 </div>
                 <div className="ransom-ascii">
-{`  ██████╗  █████╗ ███╗  ██╗██████╗ ██╗████████╗
-  ██╔══██╗██╔══██╗████╗ ██║██╔══██╗██║╚══██╔══╝
-  ██████╔╝███████║██╔██╗██║██║  ██║██║   ██║   
-  ██╔══██╗██╔══██║██║╚████║██║  ██║██║   ██║   
-  ██████╔╝██║  ██║██║ ╚███║██████╔╝██║   ██║   
-  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚═════╝ ╚═╝   ╚═╝  `}
+{asciiText}
                 </div>
                 <div className="ransom-text">
                   <p><span className="red-text">ATTENTION SMALL HUMANS.</span></p>
