@@ -85,12 +85,12 @@ const STEPS = [
     what: 'Solve a logic grid for a 4-digit combo.',
     details: [
       'POND + EGG = 4',
-      'PACKOUT is the largest number',
+      'SPEAKER is the largest number',
       'EGG < PLATFORM',
       'POND is odd',
       'POND is GREATER than PLATFORM',
     ],
-    answer: 'POND=3, EGG=1, PLATFORM=2, PACKOUT=4 → Grid code: 3124. Then add: 1102 + 2011 + 1020 + 3124 = 7257',
+    answer: 'POND=3, EGG=1, PLATFORM=2, SPEAKER=4 → Grid code: 3124. Then add: 1102 + 2011 + 1020 + 3124 = 7257',
     result: 'Combination is 7257. Go to the Milwaukee Packout box in the garage and unlock it.',
   },
   {
@@ -130,7 +130,7 @@ const HINTS = [
   { step: 2, hint: '"Remember PEMDAS — parentheses and exponents first. Squaring means multiply by itself."' },
   { step: 3, hint: '"First number is the row, second is the column."' },
   { step: 4, hint: '"Read the first letter AFTER the dash — not the pet name."' },
-  { step: 8, hint: '"Start with what you know for sure — PACKOUT is 4, PLATFORM is 3."' },
+  { step: 8, hint: '"Start with what you know for sure — SPEAKER is 4, PLATFORM is 3."' },
   { step: 9, hint: '"Write BANDIT first, then continue the alphabet skipping used letters."' },
 ]
 
