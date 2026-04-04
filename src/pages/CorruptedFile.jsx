@@ -21,7 +21,7 @@ AGENT REPORT — NEXT COORDINATES:
 Not every egg holds a yolk.
 Some hold secrets.
 
-The Bandit always said: if you can't
+Like I've always said: if you can't
 stand the heat, stay out of my
 hiding spots.
 
