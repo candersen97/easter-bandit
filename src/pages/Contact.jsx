@@ -39,11 +39,11 @@ ALL THREE are required to open the final lock.
   chloe: `AGENT CHLOE. Identified. The eldest.
 The Bandit expected you to lead this operation.
 
-I must say — Finnie is the finest agent in my
-network and I have YOU to thank for raising him.
-A well-parented cat is a dangerous cat.
-He is home for Easter, which means he is probably
-napping somewhere nearby. Plotting. As usual.
+I must say – Finnie is the finest agent in my
+network. Do I have you to thank for raising such
+a devious little thing? I bet he's plotting right
+now how to get the upper hand on agent Hobbes.
+Finnie had very few nice things to say about him.
 
 Your COMMS CODE is: 1020
 
